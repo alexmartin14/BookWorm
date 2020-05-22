@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BookWorm</title>
+
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link href="https://fonts.googleapis.com/css?family=Quicksand:300|Noto+Serif+JP&display=swap" rel="stylesheet">
+ <link rel="shortcut icon" href="icon.ico">
+ <link href="general.css" rel="stylesheet" type="text/css">
+ <link href="reviews.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="wrapper">
+  <nav class="navbar" id="navbar">
+    <a id="navbar-brand" href="index.html">BookWorm</a>
+    <div class="topnav" id="myTopnav">
+      <a href="reviews.html" class="active">2019 Bestsellers</a>
+      <a href="index.html">Home</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </nav>
+   
+<div class="header">
+  <img id="head-image" src="review-banner-4.jpg" alt="books of 2019">
+  <h1> BookWorm's Best of 2019 </h1>
+  <div class="search-bar">
+    <input type="text" name="search" value="" autocomplete="off"
+      id="myinput" onkeyup="searchFunction()" placeholder="Search...">
+  </div>
+</div>
+ 
+<div class="container">
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('fiction')"> Fiction</button>
+  <button class="btn" onclick="filterSelection('fact')"> Non-Fiction</button>
+  <button class="btn" onclick="filterSelection('romance')"> Romance</button>
+  <button class="btn" onclick="filterSelection('thriller')"> Thriller</button>
+  <button class="btn" onclick="filterSelection('sci-fi')"> Sci-Fi</button>
+</div>
+
+<ul id="wrapper"> 
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fiction">
+          <button class="book-button" id="myBtn1" value="1" onClick="getModalId(this.value)" style="background-image: url('womentalking.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal1" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="womentalking.jpg" alt="Women Talking book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a> Women Talking - Miriam Toews</a></h4>
+                    <br>
+                    <p>Toews' emphasis on names and definitions serves to highlight how precise her own writing is,
+                    and how smart. The intelligence on display in Women Talking is as ferocious as it is warm. Women Talking is 
+                    a profoundly intelligent book. It is an indictment of authority and a defense of belief.</p>
+                    <p>Review by Lily Meyer</p>
+        
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           </div>
+          </div>
+        </div>
+      </li>
+    </div>
+        
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fiction">
+          <button class="book-button" id="myBtn2" value="2" onClick="getModalId(this.value)"
+               style="background-image: url('americanmarriage.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal2" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                 <div class="col-sm-6">
+                    <img class="modal-img" src="americanmarriage.jpg" alt="American Marriage book">
+                </div>
+                <div class="col-sm-6">
+                  <span class="close">&times;</span>
+                    <h4><a>An American Marriage - Tayari Jones</a></h4>
+                    <br>
+                    <p>This stirring love story is a deeply insightful look into the hearts and minds of 
+                      three people who are at once bound and separated by forces beyond their control. An 
+                      American Marriage is a masterpiece of storytelling, an intimate look into the souls of 
+                      people who must reckon with the past while moving forward- with hope and pain- into the future.</p>
+                    <p>Review by Steven Andrews</p>
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+             </div>
+            </div>
+         </div>
+        </div>
+      </li>
+    </div>
+      
+    <div class="col-sm-2">
+     <li>
+      <!-- Pop up modals  -->
+       <div class="filterDiv fiction romance">
+          <button class="book-button filterDiv fiction romance" id="myBtn3" value="3" onClick="getModalId(this.value)" 
+          style="background-image: url('normalpeople.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal3" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="normalpeople.jpg" alt="Normal people book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a> Normal People - Sally Rooney</a></h4>
+                    <br>
+                    <p>Capturing the zeitgeist with all the skill and subtlety of her debut, Conversations with Friends, Sally Rooney’s 
+                      Normal People follows the intersecting story of Marianne and Connell as they navigate the changing landscape of 
+                      their relationship into adulthood. Deftly written, emotionally honest and devastatingly perceptive, Normal People 
+                      is an award-winning modern classic.</p>
+                    <p>Review by Sarah Stone</p>
+              
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+              
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fiction sci-fi thriller">
+          <button class="book-button filterDiv fiction sci-fi thriller" id="myBtn4" value="4" onClick="getModalId(this.value)" 
+            style="background-image: url('institute.png');"></button> 
+            <!-- The Modal -->
+            <div id="myModal4" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <img class="modal-img" src="institute.png" alt="The Institute book">
+                    </div>
+                    <div class="col-sm-6">
+                      <span class="close">&times;</span>
+                      <h4><a> The Institute - Stephen King</a></h4>
+                      <br>
+                      <p>The master craftsman spins an eerie tale of state sponsored research units and kids with supernatural 
+                         abilities. Themes of revenge and betrayed childhood innocence hover ominously over a complex narrative 
+                         about incarcerated youths with uncanny powers, as King proves his awesome storytelling mettle once again.</p>
+                         <p>Review by Eilidh Tate</p>
+                      
+                        <div class="star-rating">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </li>
+    </div>
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fiction">
+          <button class="book-button" id="myBtn5" value="5" onClick="getModalId(this.value)" #
+            style="background-image: url('nightboat.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal5" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="nightboat.jpg" alt="Night Boat to Tangier book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a> Night Boat to Tangier - Kevin Barry</a></h4>
+                    <br>
+                    <p>A sly, twinkling jewel of a novel, Night Boat to Tangier ripples with the kind of mordant humour and tattered 
+                       romanticism that has made Kevin Barry one of the most highly respected of contemporary authors. Marrying laconic Irish wit to faded Latin glamour, this tale of careworn gangsters, 
+                       lost love and male friendship is rich, evocative fiction at its very finest.</p>
+                       <p>Review by Melody Verdun</p>
+                   
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fact">
+          <button class="book-button" id="myBtn6" value="6" 
+             onClick="getModalId(this.value)" style="background-image: url('chernobyl.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal6" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="chernobyl.jpg" alt="Midnight in Chernobyl book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a> Midnight in Chernobyl - Adam Higginbotham</a></h4>
+                    <br>
+                    <p>Toews' emphasis on names and definitions serves to highlight how precise her own writing is,
+                       and how smart. The intelligence on display in Women Talking is as ferocious as it is warm. Women Talking is 
+                       a profoundly intelligent book. It is an indictment of authority and a defense of belief.</p>
+                       <p>Review by Lakenya Koller</p>
+                   
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fiction">
+          <button class="book-button" id="myBtn7" value="7" onClick="getModalId(this.value)" 
+           style="background-image: url('lostchildren.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal7" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="lostchildren.jpg" alt="Lost Children Archive book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a> Lost Children Archive - Valeria Luiselli</a></h4>
+                    <br>
+                    <p>Daring, brave and fiercely intelligent, Mexican-born novelist Luiselli’s dual narrative 
+                       of two very different family journeys plays with form and contrast to highlight the fissures 
+                       and fault lines of a deeply divided and unequal society. Drawn from her first-hand experiences 
+                       helping child asylum seekers, Luiselli’s first novel in English fashions the American road story 
+                       into something genuinely novel: a blistering catalogue of migration and exile. Blazing with eloquent 
+                       indignation and dark satire, Lost Children Archive is a profoundly human story about major political themes.</p>
+                    <p>Review by Margie Walts</p>
+                  
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fact">
+          <button class="book-button" id="myBtn8" value="8" 
+           onClick="getModalId(this.value)" style="background-image: url('howto.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal8" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="howto.jpg" alt="How to book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a> How to - Randall Munroe</a></h4>
+                    <br>
+                    <p>The bestselling author of What If? and Thing Explainer returns with a collection 
+                       of heroically overcomplicated solutions to everyday issues. From ageing his friends 
+                       by testing the radioactivity of their teeth to getting to appointments on time by destroying 
+                       the moon, the methods employed in this paean to pointlessness are mystifying, maddening 
+                       and endlessly fascinating.</p>
+                    <p>Review by Clara Tinch</p>
+                  
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fact">
+          <button class="book-button" id="myBtn9" value="9"
+           onClick="getModalId(this.value)" style="background-image: url('yellowhouse.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal9" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="yellowhouse.jpg" alt="The Yellow House book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a> The Yellow House - Sarah M Broom</a></h4>
+                    <br>
+                    <p>The Winner of the 2019 National Book Award, The Yellow House is a spellbinding memoir,
+                      family history and cultural excavation of New Orleans. Through the lens of one family, 
+                      Brooms maps a century’s worth of racial and economical inequality, as well as the immense 
+                      cultural richness of her native city. Transformative and immensely moving, The Yellow House 
+                      heralds a powerful new voice in non-fiction.</p>
+                    <p>Review by Shawn Burton</p>
+                  
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fiction sci-fi">
+          <button class="book-button" id="myBtn10" value="10"
+           onClick="getModalId(this.value)" style="background-image: url('exhalation.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal10" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="exhalation.jpg" alt="Exhalation book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a> Exhalation - Ted Chiang</a></h4>
+                    <br>
+                    <p>A collection of science fiction stories for people who don’t like science 
+                      fiction, Chiang’s work abounds in philosophical enquiry and nuanced approaches 
+                      to the human condition. Fantastically rich and varied, the pieces gathered in 
+                      Exhalation are every bit the equal of his groundbreaking first collection, Stories 
+                      of Your Life and Others.</p>
+                    <p>Review by Abdul Otto</p>
+                  
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fiction thriller">
+          <button class="book-button" id="myBtn11" value="11"
+           onClick="getModalId(this.value)" style="background-image: url('americanspy.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal11" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="americanspy.jpg" alt="American Spy book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a> American Spy, Lauren Wilkinson</a></h4>
+                    <br>
+                    <p>American Spy works on so many levels — it's an expertly written spy thriller as well 
+                      as a deeply intelligent literary novel that tackles issues of politics, race and gender 
+                      in a way that's never even close to being heavy-handed or didactic. Above all, it's just 
+                      so much fun to read — like the best of John le Carré, it's extremely tough to put down. 
+                      It marks the debut of an immensely talented writer who's refreshingly unafraid to take risks, 
+                      and has the skills to make those risks pay off.</p>
+                    <p>Review by Nelson Fagin</p>
+                  
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fiction thriller">
+          <button class="book-button filterDiv" id="myBtn12" value="12"
+            onClick="getModalId(this.value)" style="background-image: url('glasshotel.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal12" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="glasshotel.jpg" alt="The Glass Hotel book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a> The Glass Hotel - Emily St.John Mandel</a></h4>
+                    <br>
+                    <p>Six years after the ground-breaking dystopia Station Eleven, Emily St. John Mandel 
+                       returns with a kaleidoscopic mystery rich in ineffable magic and good old fashioned 
+                       storytelling. Deftly weaving together the stories of a bartender, a hotel owner and a 
+                       shipping agent into a gripping, evocative novel of panoramic sweep and nuanced characterisation, 
+                       The Glass Hotel is a resounding success on every level. </p>
+                    <p>Review by Sally Martin</p>
+                  
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+  </div>    
+        
+  <div class="row">
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fiction">
+          <button class="book-button" id="myBtn13" value="13"
+            onClick="getModalId(this.value)" style="background-image: url('transcendentkingdom.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal13" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="transcendentkingdom.jpg" alt="Transcendent Kingdom book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a> Transcendent Kingdom - Yaa Gyasi</a></h4>
+                    <br>
+                    <p>A much anticipated second novel from the award-winning author of Homegoing, Transcendent 
+                       Kingdom charts the experiences of a Ghanaian immigrant family in modern America.Intricate 
+                       and harrowing yet full of hope, Gyasi’s piercing prose summons the ubiquitous ghosts of 
+                       America’s darkest past in present-day Alabama.</p>
+                    <p>Review by Craig Williams</p>
+                  
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fiction sci-fi">
+          <button class="book-button" id="myBtn14" value="14"
+            onClick="getModalId(this.value)" style="background-image: url('testaments.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal14" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="testaments.jpg" alt="The Testaments book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a> The Testaments - Margaret Atwood</a></h4>
+                    <br>
+                    <p>In this electrifying sequel to The Handmaid's Tale, acclaimed author Margaret 
+                      Atwood answers the question that has tantalised readers for 33 years: What happened 
+                      to Offred? Since 1985, Margaret Atwood's vision has only grown in significance, 
+                      becoming a rallying call around the world. Now The Testaments finally reveals, for 
+                      the very first time, Margaret Atwood's vision of Gilead's future.</p>
+                    <p>Review by John May</p>
+                  
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fact">
+          <button class="book-button filterDiv fact" id="myBtn15" value="15"
+            onClick="getModalId(this.value)" style="background-image: url('the-body.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal15" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="the-body.jpg" alt="The Body book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a> The Body - Bill Bryson</a></h4>
+                    <br>
+                    <p>Bill Bryson has proved time and again the ideal travelling companion, 
+                       and now he takes us on a very singular tour of the human body. Following 
+                       on from the classic A Short History of Nearly Everything, The Body uncovers 
+                       the workings of organs, muscles and bones and is steeped in fascinating anecdote 
+                       and enlightening trivia. An indispensable guide to the matter that we are made 
+                       of, The Body is the must read science book of the year.</p>
+                    <p>Review by Julienne Frank</p>
+                  
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checkec"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fiction romance">
+          <button class="book-button" id="myBtn16" value="16"
+            onClick="getModalId(this.value)" style="background-image: url('conversations-with-friends.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal16" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="conversations-with-friends.jpg" alt="Conversations with Friends book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a> Conversations with Friends - Sally Rooney</a></h4>
+                    <br>
+                    <p>Conversations with Friends is also sharp, bitingly funny fiction that digs deep into identity 
+                       and communication; slicing into the divide between who we are, and who we present ourselves to 
+                       be. Hooking a reader from the first page, this modern love story about growing up and the infinite 
+                      complexities of intimacy is a masterful debut from a major new talent.</p>
+                    <p>Review by Faith Cooper</p>
+                  
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fiction romance">
+          <button class="book-button" id="myBtn17" value="17"
+            onClick="getModalId(this.value)" style="background-image: url('crawdads.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal17" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="crawdads.jpg" alt="Where the Carwdads Sing book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a>Where the Crawdads Sing - Delia Owens</a></h4>
+                    <br>
+                    <p>A remarkable debut from a remarkable writer, Where the Crawdads Sing bubbles 
+                      over with the melting-pot tension of a community beset by tragedy and shaped 
+                      by the landscape that surrounds it. Character-driven, with an impeccable sense 
+                      of place and time, this is a  richly imagined story of innocence undone and of 
+                      a small town torn and re-shaped by crisis.</p>
+                    <p>Review by Kevin Ross</p>
+                
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+    <div class="col-sm-2">
+      <li>
+        <!-- Pop up modals  -->
+        <div class="filterDiv fact">
+          <button class="book-button" id="myBtn18" value="18"
+            onClick="getModalId(this.value)" style="background-image: url('michelle.jpg');"></button>
+          <!-- The Modal -->
+          <div id="myModal18" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="modal-img" src="michelle.jpg" alt="Becoming book">
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="close">&times;</span>
+                    <h4><a>Becoming - Michelle Obama</a></h4>
+                    <br>
+                    <p>A remarkable debut from a remarkable writer, Where the Crawdads Sing bubbles 
+                       over with the melting-pot tension of a community beset by tragedy and shaped 
+                       by the landscape that surrounds it. Character-driven, with an impeccable sense 
+                       of place and time, this is a  richly imagined story of innocence undone and of 
+                       a small town torn and re-shaped by crisis.</p>
+                    <p>Review by Kevin Ross</p>
+              
+                    <div class="star-rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+  </div>
+  </div>
+</ul>      
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div class="row footer-row">
+      <div class="about-company" id="social-media-icons">
+        <p></p><a href="https://en-gb.facebook.com"><i class="fa fa-facebook-square mr-1"></i></a>
+        <a href="https://www.linkedin.com"><i class="fa fa-linkedin-square"></i></a>
+        <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a></p>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col copyright">
+        <p class=""><small class="text-white-50">© 2020. All Rights Reserved.</small></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script type="text/javascript" src="general.js"></script>
+  <script type="text/javascript" src="reviews.js"></script>
+ 
+</body>
+</html>
+

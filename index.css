@@ -1,0 +1,353 @@
+
+/*index.css*/
+
+.carousel {
+  width:100%;
+  top:0px;
+  z-index: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel{
+    display: none;
+  }
+
+  .carousel-inner{
+    width: auto;
+  }
+
+  #carousel-content-1{
+    position: relative;
+  }
+}
+
+.carousel-inner {
+  position: relative; 
+  width: 100%; 
+  overflow: hidden;
+  z-index: 0;
+}
+
+#carousel-content-1 {
+  position: absolute;
+  bottom: 60%;
+  left: 40%;
+  z-index: 20;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#carousel-content-1 h1{
+  font-size: 3.5em;
+}
+
+#carousel-content-2 {
+  position: absolute;
+  bottom: 50%;
+  left: 15%;
+  z-index: 20;
+  color: white;
+  vertical-align: middle;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#carousel-content-2 h1{
+  font-size: 3.5em;
+}
+
+#carousel-content-3 {
+  position: absolute;
+  color: white;
+  bottom: 40%;
+  left: 15%;
+  z-index: 20;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#carousel-content-3 h1{
+  font-size: 3.5em;
+}
+
+#bestof {
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  padding: 5px 15px;
+}
+
+#myBtn1 {
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  padding: 5px 15px;
+  margin-top: 3%;
+}
+
+
+.row-introduction {
+  font-family: 'Amatic SC', cursive;
+  padding: 0;
+  text-align: center;
+  height: 100%;
+  color: #333d51;
+}
+
+/* card */
+
+.card {
+  background-color: transparent !important;
+  width: 260px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 2%;
+  border: none;
+  border-radius: 2%
+}
+  
+@media screen and (max-width: 600px) {
+  .card {
+    justify-content: center;
+  }
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border: none;
+  border-radius: 2%
+}
+  
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+  
+.card img, .card-img-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top:0;left:0;right:0;
+  border: none;
+  border-radius: 2%
+}
+  
+.card-img-overlay {
+  transform: rotateY(180deg);
+  background:#ffdb58;
+  color:white;
+}
+
+/* 5 star rating */
+  
+.checked {
+  color: orange;
+}
+
+.detail {
+  padding: 0%;
+}
+
+
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 5px; 
+  resize: vertical;
+}
+  
+#subject {
+  height: 60px;
+}
+  
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #ffdb58;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  /* background-color: rgb(0,0,0); Fallback color */
+  /* background-color: rgba(0,0,0,0.4); Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #ffdb58;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  width: 40%; /* Could be more or less, depending on screen size */
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#myBtn2 {
+  background-color: #333d51;
+  border-radius: 20px;
+  padding: 10px 32px;
+  font-size: 1.2em;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  border: none;
+}
+
+
+#contact-row {
+  align-items: center;
+}
+
+.wrapper-2{
+  max-width: 400px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-style: solid;
+  border-color: #ffdb58;
+  border-radius: 10px;
+  align-items: center;
+  background-image: url(polkadot.png);
+  padding: 20px;
+}
+
+@media only screen and (max-width: 600px){
+  .wrapper-2 {
+    width: auto;
+  }
+}
+
+.wrapper-2 h2{
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: black;
+  font-family: 'Quicksand', sans-serif;
+  background-color: white;
+}
+
+.wrapper-2 .input_field{
+  margin-bottom: 10px;
+}
+
+.wrapper-2 .input_field input[type="text"],
+.wrapper-2 textarea{
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  padding: 10px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.wrapper-2 textarea{
+  resize: none;
+  height: 80px;
+}
+
+.wrapper-2 #contact-btn input[type="submit"]{
+  border: 0px;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  background: #ffdb58;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#error_message{
+  margin-bottom: 20px;
+  background: #fe8b8e;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+
+
+#subscribe-image {
+  opacity: 0.4;
+  border-radius: 10px;
+  /* top: 50%;
+  left: 50%; */
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px){
+  #subscribe-image {
+    width: auto;
+    margin: 5%;
+  }
+}
+
+.wrapper-3 #myBtn2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.wrapper-3 #myBtn2:hover {
+  background-color: #ffdb58;
+}
+
+@media screen and (max-width: 600px) {
+  #myModal-2{
+    width: 80%;
+  }
+}
+
+.col-sm-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-sm-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
