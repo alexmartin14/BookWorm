@@ -10,8 +10,8 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <link href="https://fonts.googleapis.com/css?family=Quicksand:300|Noto+Serif+JP&display=swap" rel="stylesheet">
  <link rel="shortcut icon" href="icon.ico">
- <link href="general.css" rel="stylesheet" type="text/css">
- <link href="reviews.css" rel="stylesheet" type="text/css">
+ <link href="../CSS/general.css" rel="stylesheet" type="text/css">
+ <link href="../CSS/reviews.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     <a id="navbar-brand" href="index.html">BookWorm</a>
     <div class="topnav" id="myTopnav">
       <a href="reviews.html" class="active">2019 Bestsellers</a>
-      <a href="index.html">Home</a>
+      <a href="../index.html">Home</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
@@ -28,24 +28,24 @@
   </nav>
    
 <div class="header">
-  <img id="head-image" src="review-banner-4.jpg" alt="books of 2019">
+  <img id="head-image" src="../Images/review-banner-4.jpg" alt="books of 2019">
   <h1> BookWorm's Best of 2019 </h1>
   <div class="search-bar">
     <input type="text" name="search" value="" autocomplete="off"
       id="myinput" onkeyup="searchFunction()" placeholder="Search...">
   </div>
 </div>
- 
+
 <div class="container">
 
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('fiction')"> Fiction</button>
-  <button class="btn" onclick="filterSelection('fact')"> Non-Fiction</button>
-  <button class="btn" onclick="filterSelection('romance')"> Romance</button>
-  <button class="btn" onclick="filterSelection('thriller')"> Thriller</button>
-  <button class="btn" onclick="filterSelection('sci-fi')"> Sci-Fi</button>
-</div>
+  <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('fiction')"> Fiction</button>
+    <button class="btn" onclick="filterSelection('fact')"> Non-Fiction</button>
+    <button class="btn" onclick="filterSelection('romance')"> Romance</button>
+    <button class="btn" onclick="filterSelection('thriller')"> Thriller</button>
+    <button class="btn" onclick="filterSelection('sci-fi')"> Sci-Fi</button>
+  </div>
 
 <ul id="wrapper"> 
   <div class="container">
@@ -54,7 +54,7 @@
       <li>
         <!-- Pop up modals  -->
         <div class="filterDiv fiction">
-          <button class="book-button" id="myBtn1" value="1" onClick="getModalId(this.value)" style="background-image: url('womentalking.jpg');"></button>
+          <button class="book-button" id="myBtn1" value="1" onClick="getModalId(this.value)" style="background-image: url(../Images/womentalking.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal1" class="modal">
             <!-- Modal content -->
@@ -62,7 +62,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="womentalking.jpg" alt="Women Talking book">
+                    <img class="modal-img" src="../Images/womentalking.jpg" alt="Women Talking book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -94,7 +94,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fiction">
           <button class="book-button" id="myBtn2" value="2" onClick="getModalId(this.value)"
-               style="background-image: url('americanmarriage.jpg');"></button>
+               style="background-image: url(../Images/americanmarriage.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal2" class="modal">
             <!-- Modal content -->
@@ -102,7 +102,7 @@
               <div class="container-fluid">
                 <div class="row">
                  <div class="col-sm-6">
-                    <img class="modal-img" src="americanmarriage.jpg" alt="American Marriage book">
+                    <img class="modal-img" src="../Images/americanmarriage.jpg" alt="American Marriage book">
                 </div>
                 <div class="col-sm-6">
                   <span class="close">&times;</span>
@@ -134,7 +134,7 @@
       <!-- Pop up modals  -->
        <div class="filterDiv fiction romance">
           <button class="book-button filterDiv fiction romance" id="myBtn3" value="3" onClick="getModalId(this.value)" 
-          style="background-image: url('normalpeople.jpg');"></button>
+          style="background-image: url(../Images/normalpeople.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal3" class="modal">
             <!-- Modal content -->
@@ -142,7 +142,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="normalpeople.jpg" alt="Normal people book">
+                    <img class="modal-img" src="../Images/normalpeople.jpg" alt="Normal people book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -175,7 +175,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fiction sci-fi thriller">
           <button class="book-button filterDiv fiction sci-fi thriller" id="myBtn4" value="4" onClick="getModalId(this.value)" 
-            style="background-image: url('institute.png');"></button> 
+            style="background-image: url(../Images/institute.png);"></button> 
             <!-- The Modal -->
             <div id="myModal4" class="modal">
               <!-- Modal content -->
@@ -183,7 +183,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-sm-6">
-                      <img class="modal-img" src="institute.png" alt="The Institute book">
+                      <img class="modal-img" src="../Images/institute.png" alt="The Institute book">
                     </div>
                     <div class="col-sm-6">
                       <span class="close">&times;</span>
@@ -214,7 +214,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fiction">
           <button class="book-button" id="myBtn5" value="5" onClick="getModalId(this.value)" #
-            style="background-image: url('nightboat.jpg');"></button>
+            style="background-image: url(../Images/nightboat.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal5" class="modal">
             <!-- Modal content -->
@@ -222,7 +222,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="nightboat.jpg" alt="Night Boat to Tangier book">
+                    <img class="modal-img" src="../Images/nightboat.jpg" alt="Night Boat to Tangier book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -253,7 +253,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fact">
           <button class="book-button" id="myBtn6" value="6" 
-             onClick="getModalId(this.value)" style="background-image: url('chernobyl.jpg');"></button>
+             onClick="getModalId(this.value)" style="background-image: url(../Images/chernobyl.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal6" class="modal">
             <!-- Modal content -->
@@ -261,7 +261,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="chernobyl.jpg" alt="Midnight in Chernobyl book">
+                    <img class="modal-img" src="../Images/chernobyl.jpg" alt="Midnight in Chernobyl book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -295,7 +295,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fiction">
           <button class="book-button" id="myBtn7" value="7" onClick="getModalId(this.value)" 
-           style="background-image: url('lostchildren.jpg');"></button>
+           style="background-image: url(../Images/lostchildren.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal7" class="modal">
             <!-- Modal content -->
@@ -303,7 +303,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="lostchildren.jpg" alt="Lost Children Archive book">
+                    <img class="modal-img" src="../Images/lostchildren.jpg" alt="Lost Children Archive book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -337,7 +337,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fact">
           <button class="book-button" id="myBtn8" value="8" 
-           onClick="getModalId(this.value)" style="background-image: url('howto.jpg');"></button>
+           onClick="getModalId(this.value)" style="background-image: url(../Images/howto.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal8" class="modal">
             <!-- Modal content -->
@@ -345,7 +345,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="howto.jpg" alt="How to book">
+                    <img class="modal-img" src="../Images/howto.jpg" alt="How to book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -378,7 +378,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fact">
           <button class="book-button" id="myBtn9" value="9"
-           onClick="getModalId(this.value)" style="background-image: url('yellowhouse.jpg');"></button>
+           onClick="getModalId(this.value)" style="background-image: url(../Images/yellowhouse.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal9" class="modal">
             <!-- Modal content -->
@@ -386,7 +386,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="yellowhouse.jpg" alt="The Yellow House book">
+                    <img class="modal-img" src="../Images/yellowhouse.jpg" alt="The Yellow House book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -419,7 +419,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fiction sci-fi">
           <button class="book-button" id="myBtn10" value="10"
-           onClick="getModalId(this.value)" style="background-image: url('exhalation.jpg');"></button>
+           onClick="getModalId(this.value)" style="background-image: url(../Images/exhalation.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal10" class="modal">
             <!-- Modal content -->
@@ -427,7 +427,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="exhalation.jpg" alt="Exhalation book">
+                    <img class="modal-img" src="../Images/exhalation.jpg" alt="Exhalation book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -460,7 +460,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fiction thriller">
           <button class="book-button" id="myBtn11" value="11"
-           onClick="getModalId(this.value)" style="background-image: url('americanspy.jpg');"></button>
+           onClick="getModalId(this.value)" style="background-image: url(../Images/americanspy.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal11" class="modal">
             <!-- Modal content -->
@@ -468,7 +468,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="americanspy.jpg" alt="American Spy book">
+                    <img class="modal-img" src="../Images/americanspy.jpg" alt="American Spy book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -502,7 +502,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fiction thriller">
           <button class="book-button filterDiv" id="myBtn12" value="12"
-            onClick="getModalId(this.value)" style="background-image: url('glasshotel.jpg');"></button>
+            onClick="getModalId(this.value)" style="background-image: url(../Images/glasshotel.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal12" class="modal">
             <!-- Modal content -->
@@ -510,7 +510,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="glasshotel.jpg" alt="The Glass Hotel book">
+                    <img class="modal-img" src="../Images/glasshotel.jpg" alt="The Glass Hotel book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -546,7 +546,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fiction">
           <button class="book-button" id="myBtn13" value="13"
-            onClick="getModalId(this.value)" style="background-image: url('transcendentkingdom.jpg');"></button>
+            onClick="getModalId(this.value)" style="background-image: url(../Images/transcendentkingdom.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal13" class="modal">
             <!-- Modal content -->
@@ -554,7 +554,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="transcendentkingdom.jpg" alt="Transcendent Kingdom book">
+                    <img class="modal-img" src="../Images/transcendentkingdom.jpg" alt="Transcendent Kingdom book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -586,7 +586,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fiction sci-fi">
           <button class="book-button" id="myBtn14" value="14"
-            onClick="getModalId(this.value)" style="background-image: url('testaments.jpg');"></button>
+            onClick="getModalId(this.value)" style="background-image: url(../Images/testaments.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal14" class="modal">
             <!-- Modal content -->
@@ -594,7 +594,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="testaments.jpg" alt="The Testaments book">
+                    <img class="modal-img" src="../Images/testaments.jpg" alt="The Testaments book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -627,7 +627,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fact">
           <button class="book-button filterDiv fact" id="myBtn15" value="15"
-            onClick="getModalId(this.value)" style="background-image: url('the-body.jpg');"></button>
+            onClick="getModalId(this.value)" style="background-image: url(../Images/the-body.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal15" class="modal">
             <!-- Modal content -->
@@ -635,7 +635,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="the-body.jpg" alt="The Body book">
+                    <img class="modal-img" src="../Images/the-body.jpg" alt="The Body book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -669,7 +669,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fiction romance">
           <button class="book-button" id="myBtn16" value="16"
-            onClick="getModalId(this.value)" style="background-image: url('conversations-with-friends.jpg');"></button>
+            onClick="getModalId(this.value)" style="background-image: url(../Images/conversations-with-friends.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal16" class="modal">
             <!-- Modal content -->
@@ -677,7 +677,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="conversations-with-friends.jpg" alt="Conversations with Friends book">
+                    <img class="modal-img" src="../Images/conversations-with-friends.jpg" alt="Conversations with Friends book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -709,7 +709,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fiction romance">
           <button class="book-button" id="myBtn17" value="17"
-            onClick="getModalId(this.value)" style="background-image: url('crawdads.jpg');"></button>
+            onClick="getModalId(this.value)" style="background-image: url(../Images/crawdads.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal17" class="modal">
             <!-- Modal content -->
@@ -717,7 +717,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="crawdads.jpg" alt="Where the Carwdads Sing book">
+                    <img class="modal-img" src="../Images/crawdads.jpg" alt="Where the Carwdads Sing book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
@@ -750,7 +750,7 @@
         <!-- Pop up modals  -->
         <div class="filterDiv fact">
           <button class="book-button" id="myBtn18" value="18"
-            onClick="getModalId(this.value)" style="background-image: url('michelle.jpg');"></button>
+            onClick="getModalId(this.value)" style="background-image: url(../Images/michelle.jpg);"></button>
           <!-- The Modal -->
           <div id="myModal18" class="modal">
             <!-- Modal content -->
@@ -758,19 +758,19 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img class="modal-img" src="michelle.jpg" alt="Becoming book">
+                    <img class="modal-img" src="../Images/michelle.jpg" alt="Becoming book">
                   </div>
                   <div class="col-sm-6">
                     <span class="close">&times;</span>
                     <h4><a>Becoming - Michelle Obama</a></h4>
                     <br>
-                    <p>A remarkable debut from a remarkable writer, Where the Crawdads Sing bubbles 
-                       over with the melting-pot tension of a community beset by tragedy and shaped 
-                       by the landscape that surrounds it. Character-driven, with an impeccable sense 
-                       of place and time, this is a  richly imagined story of innocence undone and of 
-                       a small town torn and re-shaped by crisis.</p>
-                    <p>Review by Kevin Ross</p>
-              
+                    <p>In her memoir, a work of deep reflection and mesmerizing storytelling, Michelle Obama invites 
+                      readers into her world, chronicling the experiences that have shaped her—from her childhood on 
+                      the South Side of Chicago to her years as an executive balancing the demands of motherhood and 
+                      work, to her time spent at the world’s most famous address. With unerring honesty and lively wit, 
+                      she describes her triumphs and her disappointments, both public and private, telling her full story 
+                      as she has lived it</p>
+                    <p>Review by Ebony Haines</p>
                     <div class="star-rating">
                       <span class="fa fa-star checked"></span>
                       <span class="fa fa-star checked"></span>
@@ -812,8 +812,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-  <script type="text/javascript" src="general.js"></script>
-  <script type="text/javascript" src="reviews.js"></script>
+  <script type="text/javascript" src="../JS/general.js"></script>
+  <script type="text/javascript" src="../JS/reviews.js"></script>
  
 </body>
 </html>

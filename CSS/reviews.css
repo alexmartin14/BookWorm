@@ -62,7 +62,12 @@ ul#wrapper {
 }
   
 /* Add a dark background to the active button */
-.btn.active {
+.btn:active {
+  background-color: #f78888;
+  color: white;
+}
+
+.btn:focus {
   background-color: #f78888;
   color: white;
 }

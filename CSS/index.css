@@ -73,6 +73,7 @@
   background-color: white;
   color: black;
   padding: 5px 15px;
+  border: none;
 }
 
 #myBtn1 {
@@ -81,6 +82,7 @@
   color: black;
   padding: 5px 15px;
   margin-top: 3%;
+  border: none;
 }
 
 
@@ -244,7 +246,7 @@ input[type=submit] {
   border-color: #ffdb58;
   border-radius: 10px;
   align-items: center;
-  background-image: url(polkadot.png);
+  background-image: url(../Images/polkadot.png);
   padding: 20px;
 }
 
